@@ -1,22 +1,28 @@
 import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
-const startAlignment = Alignment.topLeft;      // use const because position can be locked
+const startAlignment =
+    Alignment.topLeft; // use const because position can be locked
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({
+  const GradientContainer(
+    this.colors1,
+    this.colors2, {
     super.key,
   });
+
+  final Color colors1;
+  final Color colors2;
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 43, 17, 160),
-            Color.fromARGB(255, 13, 5, 51),
+            colors1,
+            colors2,
           ],
           begin: startAlignment,
           end: endAlignment,

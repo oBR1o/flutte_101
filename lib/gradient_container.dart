@@ -12,6 +12,10 @@ class GradientContainer extends StatelessWidget {
     super.key,
   });
 
+  const GradientContainer.indigo({super.key})
+      : colors1 = const Color.fromARGB(255, 17, 7, 61),
+        colors2 = const Color.fromARGB(255, 57, 24, 203);
+
   final Color colors1;
   final Color colors2;
 

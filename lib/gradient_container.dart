@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-const startAlignment = Alignment.topLeft; // use const because position can be locked
+const startAlignment =
+    Alignment.topLeft; // use const because position can be locked
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
@@ -17,9 +18,7 @@ class GradientContainer extends StatelessWidget {
   final Color colors1;
   final Color colors2;
 
-  void rollDice(){
-
-  }
+  void rollDice() {}
 
   @override
   Widget build(context) {
@@ -36,12 +35,24 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               'assets/images/dice-2.png',
               width: 200,
             ),
-            ElevatedButton(onPressed: rollDice, child: const Text('Roll Dice'))
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: rollDice,
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.pink,
+                  textStyle: const TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+                child: const Text('Roll Dice'))
           ],
         ),
       ),

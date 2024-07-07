@@ -7,7 +7,9 @@ final randomizer = Random();
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
   @override
-  State<DiceRoller> createState() => _DiceRollerState();
+  State<DiceRoller> createState() {
+    return _DiceRollerState();
+  }
 }
 
 class _DiceRollerState extends State<DiceRoller> {
